@@ -1,28 +1,148 @@
 initUI()
+//A method is a named group of Java statements that can be called. 
+It is similar to a subroutine or function in other programming languages. 
+The term init() is a method name in Java. The name is followed by Java code within { and }. 
+A method has a name, such as init, and parentheses, such as ( ). 
+The parentheses may contain arguments if the method is intended to receive some information to use in its statements. T
+he init() method has no arguments inside the parentheses. That means that no data are passed to the init() method. 
+Still, a method must have the parentheses to be identified as a method in Java. That is an important rule to know.//
+
 invokeLater ()
+//The invokeLater() is a method in java on swing package and belongs to SwingUtilities class. 
+Invokelater is used by java swing developer to update or perform any task on Event dispatcher
+thread asynchronously.invokeLater has been added into Java API from swing 
+extension and it belongs to SwingUtilities class.//
+
+//If you see the signature of invokeLater method you will find that invokeLater takes a 
+Runnable object and queues it to be processed by EventDispatcher thread. EDT thread will
+process this request only after sorting out all AWT pending events or requests.//
+
+//InvokeLater is used to perform a task asynchronously in AWT Event dispatcher thread while InvokeAndWait 
+is used to perform task synchronously.//
+//InvokeLater is non-blocking call while InvokeAndWait will block until the task is completed.//
+
 ex
+//example//
+
 null
+//A null value thus indicates an unset reference (i.e. a reference to nothing)//
+Unlike common misconception, null is not Object or neither a type. It’s just a special value, 
+which can be assigned to any reference type and you can type cast null to any type//
+
 String
+//a line of numbers//
+
 args
+//In Java args contains the supplied command-line arguments as an array of String objects.
+In other words, if you run your program as java MyProgram one two then args will contain ["one", "two"]//
+
 @Override
-public void
+//Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that 
+is already provided by one of its super-classes or parent classes. When a method in a subclass has the same name, 
+same parameters or signature and same return type(or sub-type) as a method in its super-class, 
+then the method in the subclass is said to override the method in the super-class.//
+
+public static void
+// public means that the method is visible and can be called from other objects of other types. 
+Other alternatives are private, protected, package and package-private. See here for more details.//
+//static means that the method is associated with the class, not a specific instance (object) of that class. 
+This means that you can call a static method without creating an object of the class.//
+//void means that the method has no return value. If the method returned an int you would write int instead of void.//
+
 actListner
+
+//A button listener must implement the ActionListener interface. ActionListener is an interface (not a class) that 
+contains a single method:
+
+public void actionPerformed( ActionEvent evt) ;
+
+A class that implements the interface must contain an actionPerformed() method. 
+The ActionEvent parameter is an Event object that represents an event (a button click). 
+It contains information about the event.
+
+Import the package java.awt.event.* if you are dealing with events.
+
+The listener object could be defined in a class other than the frame class.
+//
+
+
 ItemListener
+//public interface ItemListener
+extends EventListener
+The listener interface for receiving item events. The class that is interested in processing an item event implements 
+this interface. The object created with that class is then registered with a component using the component's 
+addItemListener method. When an item-selection event occurs, the listener object's itemStateChanged method is invoked.//
+
+
 NumberFormat
+//NumberFormat is the abstract base class for all number formats. 
+This class provides the interface for formatting and parsing numbers. 
+NumberFormat also provides methods for determining which locales have number formats, and what their names are.
+NumberFormat helps you to format and parse numbers for any locale. 
+Your code can be completely independent of the locale conventions for decimal points, thousands-separators, 
+or even the particular decimal digits used, or whether the number format is even decimal.
+To format a number for the current Locale, use one of the factory class methods:
+  myString = NumberFormat.getInstance().format(myNumber);//
+  
 public long
+//public final class Long
+extends Number
+implements Comparable<Long>
+
+The Long class wraps a value of the primitive type long in an object. An object of type Long contains a 
+single field whose type is long. In addition, this class provides several methods for converting a long to a 
+String and a String to a long, as well as other constants and methods useful when dealing with a long//
+
+long
+//The long data type is a 64-bit two's complement integer. 
+The signed long has a minimum value of -263 and a maximum value of 263-1. 
+In Java SE 8 and later, you can use the long data type to represent an unsigned 64-bit long, 
+which has a minimum value of 0 and a maximum value of 264-1. 
+Use this data type when you need a range of values wider than those provided by int. 
+The Long class also contains methods like compareUnsigned, divideUnsigned etc to support 
+arithmetic operations for unsigned long.//
+
 timePanel
-setForeground
+//shows the current time in Java//
+
 JComboBox<Integer>
-Long.parseLong
+//A JComboBox, which lets the user choose one of several choices, can have two very different forms. 
+The default form is the uneditable combo box, which features a button and a drop-down list of values. 
+The second form, called the editable combo box, features a text field with a small button abutting it. 
+The user can type a value in the text field or click the button to display a drop-down list. 
+Here's what the two forms of combo boxes look like in the Java look and feel//
+//Combo boxes require little screen space, and their editable (text field) form is useful for letting the user quickly 
+choose a value without limiting the user to the displayed values. Other components that can display one-of-many choices 
+are groups of radio buttons and lists. Groups of radio buttons are generally the easiest for users to understand, 
+but combo boxes can be more appropriate when space is limited or more than a few choices are available. 
+Lists are not terribly attractive, but they're more appropriate than combo boxes when the number of items 
+is large (say, over 20) or when selecting multiple items might be valid.//
+
 getActionCommand
+//getActionCommand() gives you a String representing the action command. 
+The value is component specific; for a JButton you have the option to set the value with setActionCommand(String command) but for a JTextField if you don't set this, 
+it will automatically give you the value of the text field. 
+According to the javadoc this is for compatability with java.awt.TextField//
 
 #Every popular programming language
 - JavaScript
+    - Resides in HTML, good for game-programming (on the web)
 - Swift
+    - programming language used for Apple products
 - Java
+    - used for creating applets and stand-alone applications
 - C/C++
+    - used for applications such as games, operating systems, and very low-level programming that 
+    requires better control of hardware on the PC or server
 - Python
+   - programming language that is clearer to learn (whatever that means)
 - PHP
+   - Like HTML, it is designed for web development
 - Ruby
+   - It is used in a wide range of fields, but is best known as a language for Web Applications, 
+   because of the Ruby on Rails framework
 - C#
+  - C# can be used to create almost anything but is particularly strong at building Windows desktop applications and games. 
+  C# can also be used to develop web applications and has become increasingly popular for mobile development too
 - Rust (new language)
+  - used for software development
